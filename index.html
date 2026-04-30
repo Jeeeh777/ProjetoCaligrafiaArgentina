@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Letra Perfecta — Transforma tu letra en 14 días</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,16 +15,21 @@
   <header class="header">
     <div class="header-inner">
       <div class="logo">✍️ Letra Perfecta</div>
-      <a href="#cta-final" class="header-btn">Quiero empezar ahora</a>
+      <a href="#cta-final" class="header-btn">
+        <span class="btn-pulse"></span>
+        Quiero empezar ahora
+      </a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-content">
+      <span class="hero-badge">🔥 +1.000 estudiantes ya transformaron su letra</span>
       <h1>
         Método <span class="hero-highlight">Letra Perfecta</span><br>
-        Transforma tu letra en 14 días
+        Transforma tu letra en <span class="hero-underline">14 días</span>
       </h1>
       <p class="hero-sub">Sistema completo paso a paso para mejorar tu caligrafía con resultados comprobados. Para adultos y niños.</p>
       <div class="hero-image">
@@ -29,27 +37,38 @@
           <span>Imagen del producto (mockup)</span>
         </div>
       </div>
-      <a href="#cta-final" class="btn-cta">Quiero mejorar mi letra ahora</a>
+      <a href="#cta-final" class="btn-cta btn-glow">
+        Quiero mejorar mi letra ahora
+        <span class="btn-arrow">→</span>
+      </a>
+      <div class="hero-trust">
+        <span>✅ Acceso inmediato</span>
+        <span>🛡️ Garantía 7 días</span>
+        <span>📄 Material en PDF</span>
+      </div>
     </div>
   </section>
 
+  <!-- BARRA DE URGENCIA -->
+  <div class="urgency-bar">
+    <p>⚡ <strong>Oferta especial:</strong> Precio promocional por tiempo limitado — ¡No te lo pierdas!</p>
+  </div>
+
   <!-- RESULTADOS ANTES/DESPUÉS -->
-  <section class="section results">
+  <section class="section results" id="resultados">
     <div class="container">
-      <h2 class="section-title">Resultados Reales en 14 Días</h2>
+      <h2 class="section-title">Resultados Reales en <span class="title-accent">14 Días</span></h2>
+      <p class="section-subtitle">Mira la transformación que puedes lograr con solo 15 minutos de práctica diaria</p>
       <div class="results-grid">
-        <div class="result-card">
-          <h3>❌ Antes</h3>
-          <div class="result-img-placeholder">
-            <span>Imagen antes</span>
-          </div>
+        <div class="result-card result-before">
+          <div class="result-label label-before">❌ Antes</div>
+          <img src="Caligrafia Infantil - Criança 10 Anos.png" alt="Caligrafía antes - letra desordenada" class="result-img">
           <p>Letra ilegible, desordenada y difícil de leer</p>
         </div>
-        <div class="result-card">
-          <h3>✓ Después</h3>
-          <div class="result-img-placeholder">
-            <span>Imagen después</span>
-          </div>
+        <div class="result-arrow">→</div>
+        <div class="result-card result-after">
+          <div class="result-label label-after">✓ Después</div>
+          <img src="Caligrafia Evoluída - Estilo Referência.png" alt="Caligrafía después - letra clara y profesional" class="result-img">
           <p>Caligrafía clara, organizada y profesional</p>
         </div>
       </div>
@@ -59,35 +78,35 @@
   <!-- ¿POR QUÉ ELEGIR? -->
   <section class="section benefits">
     <div class="container">
-      <h2 class="section-title">¿Por qué elegir este método?</h2>
+      <h2 class="section-title">¿Por qué elegir <span class="title-accent">este método</span>?</h2>
       <div class="benefits-grid">
         <div class="benefit-card">
-          <span class="benefit-icon">⚡</span>
+          <div class="benefit-icon-wrap"><span class="benefit-icon">⚡</span></div>
           <h3>Resultados rápidos</h3>
           <p>Mejora visible en solo 14 días con práctica diaria de 15 minutos</p>
         </div>
         <div class="benefit-card">
-          <span class="benefit-icon">👥</span>
+          <div class="benefit-icon-wrap"><span class="benefit-icon">👥</span></div>
           <h3>Para todas las edades</h3>
           <p>Funciona para adultos y niños, desde principiantes hasta avanzados</p>
         </div>
         <div class="benefit-card">
-          <span class="benefit-icon">📊</span>
+          <div class="benefit-icon-wrap"><span class="benefit-icon">📊</span></div>
           <h3>Sistema estructurado</h3>
           <p>Ejercicios progresivos con objetivos claros en cada etapa</p>
         </div>
         <div class="benefit-card">
-          <span class="benefit-icon">📄</span>
+          <div class="benefit-icon-wrap"><span class="benefit-icon">📄</span></div>
           <h3>Alta calidad</h3>
           <p>PDFs profesionales listos para imprimir y usar inmediatamente</p>
         </div>
         <div class="benefit-card">
-          <span class="benefit-icon">✅</span>
+          <div class="benefit-icon-wrap"><span class="benefit-icon">✅</span></div>
           <h3>Comprobado</h3>
           <p>Más de 1.000 personas ya mejoraron con este sistema</p>
         </div>
         <div class="benefit-card">
-          <span class="benefit-icon">🚀</span>
+          <div class="benefit-icon-wrap"><span class="benefit-icon">🚀</span></div>
           <h3>Acceso instantáneo</h3>
           <p>Descarga el material y comienza tu práctica hoy mismo</p>
         </div>
@@ -98,7 +117,7 @@
   <!-- EJERCICIOS -->
   <section class="section exercises">
     <div class="container">
-      <h2 class="section-title">Mira cómo son los ejercicios</h2>
+      <h2 class="section-title">Mira cómo son <span class="title-accent">los ejercicios</span></h2>
       <div class="exercises-grid">
         <div class="exercise-card">
           <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
@@ -127,7 +146,7 @@
   <!-- ¿QUÉ VAS A APRENDER? -->
   <section class="section curriculum">
     <div class="container">
-      <h2 class="section-title">¿Qué vas a aprender?</h2>
+      <h2 class="section-title">¿Qué vas a <span class="title-accent">aprender</span>?</h2>
       <div class="curriculum-list">
         <div class="curriculum-item">
           <div class="curriculum-number">1</div>
@@ -175,10 +194,22 @@
     </div>
   </section>
 
+  <!-- CTA INTERMEDIO -->
+  <section class="section cta-mid">
+    <div class="container">
+      <h2>¿Listo para transformar tu letra?</h2>
+      <p>Únete a más de 1.000 personas que ya mejoraron su caligrafía</p>
+      <a href="#cta-final" class="btn-cta btn-glow">
+        ¡Sí, quiero empezar ahora!
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
   <!-- TESTIMONIOS -->
   <section class="section testimonials">
     <div class="container">
-      <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+      <h2 class="section-title">Lo que dicen <span class="title-accent">nuestros estudiantes</span></h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
@@ -202,7 +233,7 @@
   <!-- TODO LO QUE INCLUYE -->
   <section class="section includes">
     <div class="container">
-      <h2 class="section-title">Todo lo que incluye el método</h2>
+      <h2 class="section-title">Todo lo que incluye <span class="title-accent">el método</span></h2>
       <div class="includes-grid">
         <div class="include-card">
           <span class="include-check">✓</span>
@@ -269,8 +300,8 @@
     <div class="container">
       <div class="guarantee-box">
         <div class="guarantee-icon">🛡️</div>
-        <h2>Garantía de satisfacción de 7 días</h2>
-        <p>Tienes 7 días completos para probar el método. Si no estás completamente satisfecho o no observas mejoras en tu caligrafía, te devolvemos el 100% de tu dinero. Sin preguntas, sin complicaciones. El riesgo es nuestro, no tuyo.</p>
+        <h2>Garantía de satisfacción de <span class="title-accent">7 días</span></h2>
+        <p>Tienes 7 días completos para probar el método. Si no estás completamente satisfecho o no observas mejoras en tu caligrafía, te devolvemos el 100% de tu dinero. Sin preguntas, sin complicaciones. <strong>El riesgo es nuestro, no tuyo.</strong></p>
       </div>
     </div>
   </section>
@@ -278,18 +309,26 @@
   <!-- CTA FINAL / PRICING -->
   <section class="section cta-final" id="cta-final">
     <div class="container">
-      <h2 class="section-title">Comienza tu transformación hoy</h2>
+      <h2 class="section-title">Comienza tu transformación <span class="title-accent">hoy</span></h2>
       <div class="cta-box">
-        <div class="cta-badge">⏰ OFERTA POR TIEMPO LIMITADO</div>
+        <div class="cta-badge pulse-badge">⏰ OFERTA POR TIEMPO LIMITADO</div>
         <div class="cta-price">
           <span class="price-old">Antes: $XX.XX</span>
           <span class="price-current">$XX.XX</span>
           <span class="price-currency">dólares</span>
         </div>
         <p class="cta-access">Acceso completo e inmediato</p>
-        <a href="#" class="btn-cta-full">🛒 Obtener acceso ahora</a>
+        <a href="#" class="btn-cta-full btn-glow">
+          🛒 Obtener acceso ahora
+          <span class="btn-arrow">→</span>
+        </a>
+        <div class="cta-guarantees">
+          <span>🛡️ Garantía 7 días</span>
+          <span>🔒 Pago seguro</span>
+          <span>⚡ Acceso inmediato</span>
+        </div>
         <div class="cta-payment-methods">
-          <p>Pago seguro — Tarjeta, PayPal y más</p>
+          <p>Tarjeta, PayPal y más métodos de pago</p>
         </div>
       </div>
     </div>
@@ -298,7 +337,7 @@
   <!-- FAQ -->
   <section class="section faq">
     <div class="container">
-      <h2 class="section-title">Preguntas Frecuentes</h2>
+      <h2 class="section-title">Preguntas <span class="title-accent">Frecuentes</span></h2>
       <div class="faq-list">
         <details class="faq-item">
           <summary>¿Cómo recibo el contenido?</summary>
