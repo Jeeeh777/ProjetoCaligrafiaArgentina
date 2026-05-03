@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letra Perfecta — Transforma tu letra en 14 días</title>
+  <title>Mi Letra Bonita — Transforma tu letra en 14 días</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
   <!-- HEADER / NAVBAR -->
   <header class="header">
     <div class="header-inner">
-      <div class="logo">✍️ Letra Perfecta</div>
+      <div class="logo">✍️ Mi Letra Bonita</div>
       <a href="#cta-final" class="header-btn">
         <span class="btn-pulse"></span>
         Quiero empezar ahora
@@ -28,7 +28,7 @@
     <div class="container hero-content">
       <span class="hero-badge">🔥 +1.000 estudiantes ya transformaron su letra</span>
       <h1>
-        Método <span class="hero-highlight">Letra Perfecta</span><br>
+        Método <span class="hero-highlight">Mi Letra Bonita</span><br>
         Transforma tu letra en <span class="hero-underline">14 días</span>
       </h1>
       <p class="hero-sub">Sistema completo paso a paso para mejorar tu caligrafía con resultados comprobados. Para adultos y niños.</p>
@@ -118,27 +118,36 @@
   <section class="section exercises">
     <div class="container">
       <h2 class="section-title">Mira cómo son <span class="title-accent">los ejercicios</span></h2>
-      <div class="exercises-grid">
-        <div class="exercise-card">
-          <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
-          <h3>Ejercicios de Trazos Básicos</h3>
-          <p>Aprende los movimientos fundamentales con ejercicios de líneas, curvas y formas básicas que fortalecen tu control del lápiz.</p>
+      <div class="exercises-carousel">
+        <div class="exercises-track">
+          <div class="exercise-card">
+            <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
+            <h3>Ejercicios de Trazos Básicos</h3>
+            <p>Aprende los movimientos fundamentales con ejercicios de líneas, curvas y formas básicas que fortalecen tu control del lápiz.</p>
+          </div>
+          <div class="exercise-card">
+            <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
+            <h3>Práctica de Letras Individuales</h3>
+            <p>Ejercicios específicos para cada letra del alfabeto, tanto mayúsculas como minúsculas, con análisis detallado de cada trazo.</p>
+          </div>
+          <div class="exercise-card">
+            <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
+            <h3>Palabras y Frases Completas</h3>
+            <p>Practica con palabras reales y frases comunes para mejorar la fluidez y conexión entre letras.</p>
+          </div>
+          <div class="exercise-card">
+            <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
+            <h3>Ejercicios de Estilo Personal</h3>
+            <p>Desarrolla tu propia caligrafía única mientras mantienes claridad y legibilidad profesional.</p>
+          </div>
         </div>
-        <div class="exercise-card">
-          <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
-          <h3>Práctica de Letras Individuales</h3>
-          <p>Ejercicios específicos para cada letra del alfabeto, tanto mayúsculas como minúsculas, con análisis detallado de cada trazo.</p>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
-        <div class="exercise-card">
-          <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
-          <h3>Palabras y Frases Completas</h3>
-          <p>Practica con palabras reales y frases comunes para mejorar la fluidez y conexión entre letras.</p>
-        </div>
-        <div class="exercise-card">
-          <div class="exercise-img-placeholder"><span>Video / Imagen</span></div>
-          <h3>Ejercicios de Estilo Personal</h3>
-          <p>Desarrolla tu propia caligrafía única mientras mantienes claridad y legibilidad profesional.</p>
-        </div>
+        <p class="carousel-hint">← Desliza para ver más →</p>
       </div>
     </div>
   </section>
@@ -366,9 +375,33 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Letra Perfecta. Todos los derechos reservados.</p>
+      <p>© 2026 Mi Letra Bonita. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    // Carousel dots sync
+    const track = document.querySelector('.exercises-track');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+
+    if (track && dots.length) {
+      track.addEventListener('scroll', () => {
+        const scrollLeft = track.scrollLeft;
+        const cardWidth = track.querySelector('.exercise-card').offsetWidth + 16;
+        const index = Math.round(scrollLeft / cardWidth);
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          const cardWidth = track.querySelector('.exercise-card').offsetWidth + 16;
+          track.scrollTo({ left: cardWidth * i, behavior: 'smooth' });
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

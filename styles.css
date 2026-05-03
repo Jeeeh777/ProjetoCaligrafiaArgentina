@@ -483,14 +483,19 @@ img {
 }
 
 /* ===========================
-   EXERCISES
+   EXERCISES (CAROUSEL)
    =========================== */
 .exercises {
   padding: 70px 0;
   background: #f0f0f0;
 }
 
-.exercises-grid {
+.exercises-carousel {
+  position: relative;
+}
+
+/* Desktop: grid normal 2x2 */
+.exercises-track {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
@@ -503,6 +508,7 @@ img {
   text-align: center;
   transition: all 0.35s ease;
   border: 2px solid transparent;
+  flex-shrink: 0;
 }
 
 .exercise-card:hover {
@@ -536,6 +542,37 @@ img {
   font-size: 0.9rem;
   color: #666;
   line-height: 1.6;
+}
+
+/* Carousel dots & hint — hidden on desktop */
+.carousel-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #2ecc71;
+  width: 28px;
+  border-radius: 5px;
+}
+
+.carousel-hint {
+  display: none;
+  text-align: center;
+  color: #999;
+  font-size: 0.8rem;
+  margin-top: 12px;
+  animation: float 2.5s ease-in-out infinite;
 }
 
 /* ===========================
@@ -1062,6 +1099,40 @@ img {
 
   .exercises-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Carousel mobile */
+  .exercises .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .exercises-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding: 0 20px 8px;
+    scrollbar-width: none;
+  }
+
+  .exercises-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .exercise-card {
+    min-width: calc(100vw - 60px);
+    max-width: calc(100vw - 60px);
+    scroll-snap-align: center;
+  }
+
+  .carousel-dots {
+    display: flex;
+  }
+
+  .carousel-hint {
+    display: block;
   }
 
   .testimonials-grid {
