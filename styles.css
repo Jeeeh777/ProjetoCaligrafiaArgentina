@@ -494,10 +494,10 @@ img {
   position: relative;
 }
 
-/* Desktop: grid normal 2x2 */
+/* Desktop: grid 3 columns */
 .exercises-track {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -529,6 +529,13 @@ img {
   color: #999;
   font-size: 0.9rem;
   border: 1px dashed #d0d0d0;
+}
+
+.exercise-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  object-fit: contain;
 }
 
 .exercise-card h3 {
