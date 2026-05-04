@@ -730,6 +730,13 @@ img {
   letter-spacing: 3px;
 }
 
+.testimonial-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
 .testimonial-img-placeholder {
   width: 100%;
   height: 150px;
