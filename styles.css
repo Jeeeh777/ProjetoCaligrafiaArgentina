@@ -181,6 +181,14 @@ img {
   font-size: 1.3rem;
   font-weight: 800;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  height: 38px;
+  width: auto;
 }
 
 .header-btn {
@@ -227,6 +235,17 @@ img {
 .hero-content {
   position: relative;
   z-index: 1;
+}
+
+.hero-logo {
+  margin-bottom: 28px;
+}
+
+.hero-logo img {
+  height: 140px;
+  width: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 15px rgba(46, 204, 113, 0.3));
 }
 
 .hero-badge {
